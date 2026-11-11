@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- English (default). German lives in values-de/strings.xml; keep both files in the same order. -->
+<resources>
+    <string name="app_name" translatable="false">Ride YTD</string>
+
+    <!-- Welcome / login -->
+    <string name="welcome_tagline">Your cycling year so far, against last year: distance, pace, projections and a form score, straight from Garmin Connect.</string>
+    <string name="welcome_connect">Connect Garmin account</string>
+    <string name="welcome_privacy">You sign in on Garmin\'s own page. Your password never touches this app; only a session token is stored, encrypted on this device.</string>
+    <string name="welcome_demo" translatable="false">Debug: preview with sample data</string>
+    <string name="login_title">Sign in to Garmin</string>
+    <string name="login_cancel">Cancel</string>
+    <string name="connecting">Connecting to Garmin…</string>
+
+    <!-- Errors -->
+    <string name="err_blocked">Garmin is rate-limiting logins (HTTP %1$d). Wait a while and try again.</string>
+    <string name="err_session_expired">Your Garmin session expired. Please connect again.</string>
+    <string name="err_garmin">Garmin request failed (%1$s).</string>
+    <string name="err_network">Network problem: couldn\'t reach Garmin.</string>
+    <string name="err_unknown">Something went wrong: %1$s</string>
+    <string name="err_login_crashed">The sign-in page stopped unexpectedly. Please try again.</string>
+
+    <!-- Top bar -->
+    <string name="title_years">%1$d vs %2$d</string>
+    <string name="sub_sample_data">sample data</string>
+    <string name="sub_syncing">syncing…</string>
+    <string name="sub_synced">synced %1$s</string>
+    <string name="demo_rider">Demo rider</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_more">More</string>
+    <string name="menu_exit_demo">Exit demo</string>
+    <string name="menu_resync">Re-download everything</string>
+    <string name="menu_disconnect">Disconnect Garmin</string>
+    <string name="loading_rides">Downloading your rides…</string>
+    <plurals name="loading_progress">
+        <item quantity="one">%d activity checked</item>
+        <item quantity="other">%d activities checked</item>
+    </plurals>
+
+    <!-- Filters -->
+    <string name="filter_all">All</string>
+    <string name="filter_outdoor">Outdoor</string>
+    <string name="filter_indoor">Indoor</string>
+    <string name="compare_with">Compare with</string>
+
+    <!-- Hero -->
+    <string name="hero_label">YEAR TO DATE</string>
+    <string name="hero_vs">vs %1$s by %2$s</string>
+    <plurals name="days_ahead">
+        <item quantity="one">%d day ahead</item>
+        <item quantity="other">%d days ahead</item>
+    </plurals>
+    <plurals name="days_behind">
+        <item quantity="one">%d day behind</item>
+        <item quantity="other">%d days behind</item>
+    </plurals>
+    <string name="dead_even">dead even</string>
+    <string name="hero_beaten">🏆 You passed all of %1$d (%2$s) on %3$s.</string>
+
+    <!-- Cumulative chart -->
+    <string name="cumulative_title">Cumulative distance</string>
+    <string name="cumulative_sub">Drag across the chart to compare any day</string>
+    <string name="legend_projection_seasonal">projection (seasonal)</string>
+    <string name="legend_projection_linear">projection (linear)</string>
+    <string name="legend_other_years">other years</string>
+    <string name="chart_projected_suffix">(proj.)</string>
+
+    <!-- Score & projection -->
+    <string name="score_title">Form score</string>
+    <string name="score_volume">Volume</string>
+    <string name="score_consistency">Consistency</string>
+    <string name="score_momentum">Momentum</string>
+    <string name="tier_unstoppable">Unstoppable</string>
+    <string name="tier_strong">Strong form</string>
+    <string name="tier_solid">Solid</string>
+    <string name="tier_building">Building</string>
+    <string name="tier_warming_up">Warming up</string>
+    <string name="projection_title">Projection</string>
+    <string name="projection_finish">%1$d finish</string>
+    <string name="projection_last_total">%1$d total</string>
+    <string name="verdict_beaten">Already beaten. Everything from here is a bonus.</string>
+    <string name="verdict_pass_on">At this pace you pass %1$d on %2$s.</string>
+    <string name="verdict_per_week">Ride %1$s/week to beat %2$d.</string>
+    <string name="verdict_no_data">No %1$d rides to compare against.</string>
+
+    <!-- Every year -->
+    <string name="years_title">Every year</string>
+    <string name="years_sub">Distance by %1$s of each year. Tap a year to compare.</string>
+    <string name="years_rank">Rank %1$d of %2$d years by this date</string>
+    <string name="years_projected_rank">Projected finish would rank %1$d of %2$d by full-year distance</string>
+    <string name="years_best">Best completed year: %1$d with %2$s</string>
+    <string name="years_full">full year %1$s</string>
+    <string name="years_projected">projected %1$s</string>
+    <string name="years_none">No earlier years with rides on Garmin yet.</string>
+
+    <!-- Monthly -->
+    <string name="monthly_title">Month by month</string>
+    <string name="monthly_sub">Tap a month for exact numbers</string>
+
+    <!-- Stat grid -->
+    <string name="numbers_title">By the numbers</string>
+    <string name="numbers_sub">This year so far vs the same period of %1$d</string>
+    <string name="stat_rides">Rides</string>
+    <string name="stat_avg_ride">Avg per ride</string>
+    <string name="stat_avg_speed">Avg speed</string>
+    <string name="stat_climbing">Climbing</string>
+    <string name="stat_saddle_time">Saddle time</string>
+    <string name="stat_longest">Longest ride</string>
+    <string name="stat_per_week">Per week</string>
+    <string name="stat_active_days">Active days</string>
+    <string name="stat_ref" translatable="false">%1$d: %2$s</string>
+
+    <!-- Streaks -->
+    <string name="streaks_title">Streaks &amp; records</string>
+    <string name="streak_current">week streak</string>
+    <string name="streak_current_sub">weeks in a row with a ride</string>
+    <string name="streak_longest">longest streak</string>
+    <string name="streak_longest_sub">all-time, since %1$d</string>
+    <string name="best_week">best week (%1$s)</string>
+    <string name="best_week_sub">week of %1$s</string>
+    <string name="active_weeks">active weeks</string>
+    <string name="active_weeks_sub">last 4 weeks: %1$s (%2$d: %3$s)</string>
+
+    <!-- Heatmap / weekdays -->
+    <string name="heatmap_title">%1$d at a glance</string>
+    <string name="heatmap_sub">Every day you rode; stronger color = longer ride</string>
+    <string name="heatmap_hint">Tap a day for details</string>
+    <string name="heatmap_less">Less</string>
+    <string name="heatmap_more">More</string>
+    <string name="weekday_title">When you ride</string>
+    <string name="weekday_sub">Distance per weekday in %1$d</string>
+
+    <!-- Fun facts -->
+    <string name="facts_title">Put in perspective</string>
+    <string name="fact_earth">%1$s %% of the way around the Earth</string>
+    <string name="fact_tdf">%1$s× the length of the Tour de France</string>
+    <string name="fact_everest">%1$s× Everest climbed (%2$s)</string>
+    <string name="fact_pizza">%1$s kcal ≈ %2$s pizzas</string>
+    <string name="fact_saddle">%1$s in the saddle ≈ %2$s full days</string>
+
+    <!-- Recent rides & activity types -->
+    <string name="recent_title">Recent rides</string>
+    <string name="type_road">Road</string>
+    <string name="type_mtb">MTB</string>
+    <string name="type_gravel">Gravel</string>
+    <string name="type_indoor">Indoor</string>
+    <string name="type_virtual">Virtual</string>
+    <string name="type_cyclocross">Cyclocross</string>
+    <string name="type_track">Track</string>
+    <string name="type_ebike">E-bike</string>
+    <string name="type_ride">Ride</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Year-to-date chart</string>
+    <string name="widget_description">This year\'s distance against your comparison year, with the cumulative chart.</string>
+    <string name="widget_connect">Open Ride YTD to connect Garmin</string>
+    <string name="widget_ref">vs %1$s</string>
+    <string name="widget_preview_title">This year vs last year</string>
+    <string name="widget_preview_value" translatable="false">4,218 km</string>
+</resources>
