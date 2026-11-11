@@ -12,8 +12,14 @@ android {
         applicationId = "app.garminytd"
         minSdk = 26
         targetSdk = 37
-        versionCode = 1
-        versionName = "1.0"
+        // Releases are git tags vMAJOR.MINOR.PATCH; CI passes the tag as -PrideYtd.version. The code is
+        // derived from it so every release installs as an update over the previous one.
+        val appVersion = providers.gradleProperty("rideYtd.version").getOrElse("1.0.0")
+        val parts = Regex("""(\d+)\.(\d+)\.(\d+)""").matchEntire(appVersion)?.groupValues?.drop(1)?.map(String::toInt)
+            ?: error("rideYtd.version must be MAJOR.MINOR.PATCH, was '$appVersion'")
+        require(parts[1] < 100 && parts[2] < 100) { "minor and patch must stay below 100" }
+        versionName = appVersion
+        versionCode = parts[0] * 10_000 + parts[1] * 100 + parts[2]
     }
 
     // Release key lives outside the repo: path + passwords come from ~/.gradle/gradle.properties

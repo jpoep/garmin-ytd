@@ -86,8 +86,29 @@ Back up the `.jks` file and its password together. Android only installs an upda
 with the same key as the installed app. Without these properties, release builds fall back to the debug
 key and print a warning.
 
-`gradle.properties` points `org.gradle.java.home` at `/usr/lib/jvm/java-27-openjdk`; change it if your
-JDK lives elsewhere. `local.properties` (not committed) needs `sdk.dir=…/Android/Sdk`.
+### CI and releases
+
+`.github/workflows/build.yml` runs on every PR and every push to `main`. It runs the unit tests, lint, and a
+**release build signed with the real key**. The key comes from the repository secrets
+`RIDEYTD_KEYSTORE_BASE64`, `RIDEYTD_STORE_PASSWORD`, `RIDEYTD_KEY_ALIAS` and `RIDEYTD_KEY_PASSWORD`. The
+APK is attached to the run as the `apk` artifact.
+
+To publish a release, push a semver tag:
+
+```sh
+git switch main && git pull
+git tag -a v1.1.0 -m "Ride YTD 1.1.0"
+git push origin v1.1.0
+```
+
+The tag sets the version: `v1.1.0` becomes versionName `1.1.0` and versionCode `10100`, i.e.
+major×10000 + minor×100 + patch. Every release therefore installs as an update over the previous one.
+The workflow builds and verifies the signed APK, then creates a GitHub Release with auto-generated notes
+and `RideYTD-1.1.0.apk` attached. Tag builds fail rather than publish if the signing secrets are missing.
+
+The build runs on JDK 27, set in `gradle/gradle-daemon-jvm.properties`. Gradle finds an installed JDK 27
+by itself, or downloads one through the foojay resolver. `local.properties` (not committed) needs
+`sdk.dir=…/Android/Sdk`, or set `ANDROID_HOME`.
 
 Debug builds have a **"preview with sample data"** button on the welcome screen, so the UI can be
 explored without a Garmin account. Release builds always require a Garmin connection.
