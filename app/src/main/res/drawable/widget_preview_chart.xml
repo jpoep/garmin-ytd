@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stylised cumulative chart: grid, last year (slate), this year (orange) with projection. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="80dp"
+    android:viewportWidth="300"
+    android:viewportHeight="120">
+    <path android:pathData="M0,118 H300 M0,78 H300 M0,38 H300" android:strokeColor="#338A94A3" android:strokeWidth="1" />
+    <path android:pathData="M0,118 C60,116 110,104 160,80 S250,52 300,46" android:strokeColor="#7D8CA3" android:strokeWidth="2.5" android:strokeLineCap="round" />
+    <path android:pathData="M0,118 C50,112 100,90 150,62 S210,34 240,28 L240,118 Z" android:fillColor="#40FF7A1A" />
+    <path android:pathData="M0,118 C50,112 100,90 150,62 S210,34 240,28" android:strokeColor="#FF7A1A" android:strokeWidth="3.5" android:strokeLineCap="round" />
+    <path android:pathData="M240,28 L300,16" android:strokeColor="#F59E5B" android:strokeWidth="2.5" android:strokeLineCap="round" />
+</vector>
